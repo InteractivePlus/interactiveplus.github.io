@@ -16,7 +16,7 @@
     "src": "index.xml"
   },
   "en/index.xml": {
-    "file": "assets/index.b53ba95c.xml",
+    "file": "assets/index.d45369dd.xml",
     "src": "en/index.xml"
   },
   "posts/index.xml": {
@@ -24,11 +24,11 @@
     "src": "posts/index.xml"
   },
   "en/posts/index.xml": {
-    "file": "assets/index.06a95772.xml",
+    "file": "assets/index.e7c64762.xml",
     "src": "en/posts/index.xml"
   },
   "en/categories/news/index.xml": {
-    "file": "assets/index.67b16e4e.xml",
+    "file": "assets/index.255cb990.xml",
     "src": "en/categories/news/index.xml"
   },
   "img/homebg.svg": {
@@ -410,13 +410,13 @@
   "_team.d41d8cd98f00b204e9800998ecf8427e.c0ba544d.js": {
     "file": "assets/team.d41d8cd98f00b204e9800998ecf8427e.c0ba544d.js"
   },
-  "home.css": {
-    "file": "assets/home.bd583783.css",
-    "src": "home.css"
-  },
   "members.css": {
     "file": "assets/members.f07efe50.css",
     "src": "members.css"
+  },
+  "home.css": {
+    "file": "assets/home.bd583783.css",
+    "src": "home.css"
   },
   "lightgallery-bundle.css": {
     "file": "assets/lightgallery-bundle.0300e777.css",

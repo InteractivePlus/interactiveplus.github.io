@@ -2,15 +2,6 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://www.interactiveplus.org//en/20200130recruit/</loc><lastmod>2020-04-30T21:57:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
-                        rel="alternate"
-                        hreflang="zh-cn"
-                        href="https://www.interactiveplus.org//20200130recruit/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="en"
-                    href="https://www.interactiveplus.org//en/20200130recruit/"
-                    /></url><url>
             <loc>https://www.interactiveplus.org//en/20200430covoid19/</loc><lastmod>2020-04-30T21:57:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
@@ -19,6 +10,15 @@
                     rel="alternate"
                     hreflang="en"
                     href="https://www.interactiveplus.org//en/20200430covoid19/"
+                    /></url><url>
+            <loc>https://www.interactiveplus.org//en/20200130recruit/</loc><lastmod>2020-01-30T21:57:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="zh-cn"
+                        href="https://www.interactiveplus.org//20200130recruit/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="en"
+                    href="https://www.interactiveplus.org//en/20200130recruit/"
                     /></url><url>
             <loc>https://www.interactiveplus.org//en/categories/</loc><lastmod>2020-04-30T21:57:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
