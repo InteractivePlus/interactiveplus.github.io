@@ -12,23 +12,23 @@
     "src": "favicon.png"
   },
   "index.xml": {
-    "file": "assets/index.19236514.xml",
+    "file": "assets/index.82edd750.xml",
     "src": "index.xml"
   },
   "en/index.xml": {
-    "file": "assets/index.79990e61.xml",
+    "file": "assets/index.b53ba95c.xml",
     "src": "en/index.xml"
   },
   "posts/index.xml": {
-    "file": "assets/index.b5db6d58.xml",
+    "file": "assets/index.6bbea597.xml",
     "src": "posts/index.xml"
   },
   "en/posts/index.xml": {
-    "file": "assets/index.e663ca54.xml",
+    "file": "assets/index.06a95772.xml",
     "src": "en/posts/index.xml"
   },
   "en/categories/news/index.xml": {
-    "file": "assets/index.a1bfa9fa.xml",
+    "file": "assets/index.67b16e4e.xml",
     "src": "en/categories/news/index.xml"
   },
   "img/homebg.svg": {
@@ -407,13 +407,16 @@
     "file": "assets/1257472418.87529a49.jpg",
     "src": "TX/1257472418.jpg"
   },
-  "members.css": {
-    "file": "assets/members.f07efe50.css",
-    "src": "members.css"
+  "_team.d41d8cd98f00b204e9800998ecf8427e.c0ba544d.js": {
+    "file": "assets/team.d41d8cd98f00b204e9800998ecf8427e.c0ba544d.js"
   },
   "home.css": {
     "file": "assets/home.bd583783.css",
     "src": "home.css"
+  },
+  "members.css": {
+    "file": "assets/members.f07efe50.css",
+    "src": "members.css"
   },
   "lightgallery-bundle.css": {
     "file": "assets/lightgallery-bundle.0300e777.css",

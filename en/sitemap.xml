@@ -2,84 +2,84 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://example.org/en/20200130recruit/</loc><lastmod>2020-04-30T21:57:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>https://www.interactiveplus.org//en/20200130recruit/</loc><lastmod>2020-04-30T21:57:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
-                        href="http://example.org/20200130recruit/"
+                        href="https://www.interactiveplus.org//20200130recruit/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="en"
-                    href="http://example.org/en/20200130recruit/"
+                    href="https://www.interactiveplus.org//en/20200130recruit/"
                     /></url><url>
-            <loc>http://example.org/en/20200430covoid19/</loc><lastmod>2020-04-30T21:57:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>https://www.interactiveplus.org//en/20200430covoid19/</loc><lastmod>2020-04-30T21:57:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
-                        href="http://example.org/20200430covoid19/"
+                        href="https://www.interactiveplus.org//20200430covoid19/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="en"
-                    href="http://example.org/en/20200430covoid19/"
+                    href="https://www.interactiveplus.org//en/20200430covoid19/"
                     /></url><url>
-            <loc>http://example.org/en/categories/</loc><lastmod>2020-04-30T21:57:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>https://www.interactiveplus.org//en/categories/</loc><lastmod>2020-04-30T21:57:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
-                        href="http://example.org/categories/"
+                        href="https://www.interactiveplus.org//categories/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="en"
-                    href="http://example.org/en/categories/"
+                    href="https://www.interactiveplus.org//en/categories/"
                     /></url><url>
-            <loc>http://example.org/en/</loc><lastmod>2020-04-30T21:57:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>https://www.interactiveplus.org//en/</loc><lastmod>2020-04-30T21:57:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
-                        href="http://example.org/"
+                        href="https://www.interactiveplus.org//"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="en"
-                    href="http://example.org/en/"
+                    href="https://www.interactiveplus.org//en/"
                     /></url><url>
-            <loc>http://example.org/en/categories/news/</loc><lastmod>2020-04-30T21:57:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>https://www.interactiveplus.org//en/categories/news/</loc><lastmod>2020-04-30T21:57:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
-                        href="http://example.org/categories/news/"
+                        href="https://www.interactiveplus.org//categories/news/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="en"
-                    href="http://example.org/en/categories/news/"
+                    href="https://www.interactiveplus.org//en/categories/news/"
                     /></url><url>
-            <loc>http://example.org/en/posts/</loc><lastmod>2020-04-30T21:57:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>https://www.interactiveplus.org//en/posts/</loc><lastmod>2020-04-30T21:57:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
-                        href="http://example.org/posts/"
+                        href="https://www.interactiveplus.org//posts/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="en"
-                    href="http://example.org/en/posts/"
+                    href="https://www.interactiveplus.org//en/posts/"
                     /></url><url>
-            <loc>http://example.org/en/members/</loc><lastmod>2019-08-02T11:04:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>https://www.interactiveplus.org//en/team/</loc><lastmod>2019-08-02T11:04:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
-                        href="http://example.org/members/"
+                        href="https://www.interactiveplus.org//team/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="en"
-                    href="http://example.org/en/members/"
+                    href="https://www.interactiveplus.org//en/team/"
                     /></url><url>
-            <loc>http://example.org/en/team/</loc><lastmod>2019-08-02T11:04:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>https://www.interactiveplus.org//en/members/</loc><lastmod>2019-08-02T11:04:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
-                        href="http://example.org/team/"
+                        href="https://www.interactiveplus.org//members/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="en"
-                    href="http://example.org/en/team/"
+                    href="https://www.interactiveplus.org//en/members/"
                     /></url><url>
-            <loc>http://example.org/en/tags/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>https://www.interactiveplus.org//en/tags/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
-                        href="http://example.org/tags/"
+                        href="https://www.interactiveplus.org//tags/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="en"
-                    href="http://example.org/en/tags/"
+                    href="https://www.interactiveplus.org//en/tags/"
                     /></url></urlset>
