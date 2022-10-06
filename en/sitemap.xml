@@ -56,15 +56,6 @@
                     hreflang="en"
                     href="http://example.org/en/posts/"
                     /></url><url>
-            <loc>http://example.org/en/team/</loc><lastmod>2019-08-02T11:04:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
-                        rel="alternate"
-                        hreflang="zh-cn"
-                        href="http://example.org/team/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="en"
-                    href="http://example.org/en/team/"
-                    /></url><url>
             <loc>http://example.org/en/members/</loc><lastmod>2019-08-02T11:04:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
@@ -73,6 +64,15 @@
                     rel="alternate"
                     hreflang="en"
                     href="http://example.org/en/members/"
+                    /></url><url>
+            <loc>http://example.org/en/team/</loc><lastmod>2019-08-02T11:04:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="zh-cn"
+                        href="http://example.org/team/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="en"
+                    href="http://example.org/en/team/"
                     /></url><url>
             <loc>http://example.org/en/tags/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
