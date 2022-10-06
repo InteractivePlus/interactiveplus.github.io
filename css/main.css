@@ -15,6 +15,11 @@ body.has-navbar-top{
 	min-height: 75rem;
 	padding-top: 4.5rem;
 }
+
+a{
+    color: initial;
+}
+
 a:hover{
     text-decoration: none;
 }

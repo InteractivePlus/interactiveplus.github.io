@@ -1,201 +1,244 @@
-var XSYD_WebSettings = {
-	newsPage: "newsdisplay.html?id=",
-	newsContent404GoBack: "index.html",
-	baseURL: "../", //This can be an absolute URL(https://www.interactiveplus.org/) or relative directory.
-	languageCookieDuration: 365
-};
+(function () {
+    "use strict";
 
-var bootstrapSize = {
-	sm: 576,
-	md: 768,
-	lg: 992,
-	xl: 1140
-}
+    /**
+     * Easy selector helper function
+     */
+    const select = (el, all = false) => {
+        el = el.trim();
+        if (all) {
+            return [...document.querySelectorAll(el)];
+        } else {
+            return document.querySelector(el);
+        }
+    };
+    // debugger
+    /**
+     * Easy event listener function
+     */
+    const on = (type, el, listener, all = false) => {
+        if (all) {
+            select(el, all).forEach((e) => e.addEventListener(type, listener));
+        } else {
+            select(el, all).addEventListener(type, listener);
+        }
+    };
 
-var XSYD_CurrentPage = {
-	width: 0,
-	height: 0,
-	correspondingBootstrapSize: "none", //can be none, sm, md, lg, xl
-	browser: "none", //firefox,chrome,edge,safari,opera,webkit,blink,gecko,quirksmode,unknown
-};
+    /**
+     * Easy on scroll event listener
+     */
+    const onscroll = (el, listener) => {
+        el.addEventListener("scroll", listener);
+    };
 
-function getGETParam(name) {
-	//构造一个含有目标参数的正则表达式对象
-	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
-	//匹配目标参数
-	var r = window.location.search.substr(1).match(reg);
-	//返回参数值
-	if(r != null) {
-		return decodeURI(r[2]);
-	}
-	return null;
-}
+    // /**
+    //  * Navbar links active state on scroll
+    //  */
+    // let navbarlinks = select("#navbar .scrollto", true);
+    // const navbarlinksActive = () => {
+    //     let position = window.scrollY + 200;
+    //     navbarlinks.forEach((navbarlink) => {
+    //         if (!navbarlink.hash) return;
+    //         let section = select(navbarlink.hash);
+    //         if (!section) return;
+    //         if (
+    //             position >= section.offsetTop &&
+    //             position <= section.offsetTop + section.offsetHeight
+    //         ) {
+    //             navbarlink.classList.add("active");
+    //         } else {
+    //             navbarlink.classList.remove("active");
+    //         }
+    //     });
+    // };
+    // window.addEventListener("load", navbarlinksActive);
+    // onscroll(document, navbarlinksActive);
 
-function setSelectorWithRemoteContent(Selector,URL){
-	"use strict";
-	$.ajax(
-		{
-			url: URL,
-			dataType: "html",
-			data: null,
-			type: "GET",
-			async: true
-		}
-	)
-	.done(function(data, textStatus, jqXHR ){
-		$(Selector).html(data);
-	})
-	.fail(function(jqXHR, textStatus, errorThrown){
-		console.error("Document(" + URL + ") failed to load: " + textStatus);
-	});
-}
-function appendSelectorWithRemoteContent(Selector, URL){
-	"use strict";
-	$.ajax(
-		{
-			url: URL,
-			dataType: "html",
-			data: null,
-			type: "GET",
-			async: true
-		}
-	)
-	.done(function(data, textStatus, jqXHR ){
-		$(Selector).append(data);
-	})
-	.fail(function(jqXHR, textStatus, errorThrown){
-		console.error("Document(" + URL + ") failed to load: " + textStatus);
-	});
-}
-function prependSelectorWithRemoteContent(Selector, URL){
-	"use strict";
-	$.ajax(
-		{
-			url: URL,
-			dataType: "html",
-			data: null,
-			type: "GET",
-			async: true
-		}
-	)
-	.done(function(data, textStatus, jqXHR ){
-		$(Selector).prepend(data);
-	})
-	.fail(function(jqXHR, textStatus, errorThrown){
-		console.error("Document(" + URL + ") failed to load: " + textStatus);
-	});
-}
+    /**
+     * Scrolls to an element with header offset
+     */
+    const scrollto = (el) => {
+        let header = select("#header");
+        let offset = header.offsetHeight;
 
-function detectBrowser(){//returns string, firefox,chrome,edge,ie,safari,opera,webkit,blink,gecko,quirksmode,unknown
-	  
-	var agent = navigator.userAgent.toLowerCase();
-	var opera = ((window.opr && opr.addons) || window.opera || navigator.userAgent.indexOf(' OPR/') >= 0);
+        if (!header.classList.contains("header-scrolled")) {
+            offset -= 10;
+        }
 
-	var browser = {  
-		ie: document.documentMode == true, // /(msie\s|trident.*rv:)([\w.]+)/.test(agent)
-		edge: !this.ie && window.styleMedia,
-		opera: (opera && opera.version),
-		quirks: (document.compatMode == 'BackCompat'),
-		firefox: typeof InstallTrigger !== 'undefined',
-		chrome: (/chrome\/(\d+\.\d)/i.test(agent)) ? +RegExp['\x241'] : false,
-		safari:  (/(\d+\.\d)?(?:\.\d)?\s+safari\/?(\d+\.\d+)?/i.test(agent) && !/chrome/i.test(agent)) ? (+(RegExp['\x241'] || RegExp['\x242'])) : false,
-		blink: (this.chrome || this.opera) && window.CSS,
-		webkit: ((this.chrome || this.opera) && !window.CSS) || this.safari || (agent.indexOf(' applewebkit/') > -1),
-		gecko: (navigator.product == 'Gecko' && !this.webkit && !this.opera && !this.ie)
-	}; 
+        let elementPos = select(el).offsetTop;
+        window.scrollTo({
+            top: elementPos - offset,
+            behavior: "smooth",
+        });
+    };
 
-	if(browser.ie){
-		return "ie";
-	}else if(browser.edge){
-		return "edge";
-	}else if(browser.opera){
-		return "opera";
-	}else if(browser.firefox){
-		return "firefox";
-	}else if(browser.chrome){
-		return "chrome";
-	}else if(browser.safari){
-		return "safari";
-	}else if(browser.quirks){
-		return "quirks";
-	}else if(browser.blink){
-		return "blink";
-	}else if(browser.gecko){
-		return "gecko";
-	}else if(browser.webkit){
-		return "webkit";
-	}
-}
+    /**
+     * Toggle .header-scrolled class to #header when page is scrolled
+     */
+    let selectHeader = select("#header");
+    if (selectHeader) {
+        const headerScrolled = () => {
+            if (window.scrollY > 32) {
+                selectHeader.classList.add("header-scrolled");
+            } else {
+                selectHeader.classList.remove("header-scrolled");
+            }
+        };
+        window.addEventListener("load", headerScrolled);
+        onscroll(document, headerScrolled);
+    }
 
-function getBootstrapType(width){
-	if(width < bootstrapSize.sm){
-		return "none";
-	}else if(width < bootstrapSize.md){
-		return "sm";
-	}else if(width < bootstrapSize.lg){
-		return "md";
-	}else if(width < bootstrapSize.xl){
-		return "lg";
-	}else{
-		return "xl";
-	}
-}
+    
 
-$(document).ready(function() { //$().load function is deprecated
-	"use strict";
-	//******************* Start Reading BrowserName/Width/Height/BootstrapSize **************************/
-	XSYD_CurrentPage.width = $(window).width();
-	XSYD_CurrentPage.height = $(window).height();
-	XSYD_CurrentPage.correspondingBootstrapSize = getBootstrapType(XSYD_CurrentPage.width);
-	XSYD_CurrentPage.browser = detectBrowser();
-	//******************* End Reading BrowserName/Width/Height/BootstrapSize ***********************/
+    /**
+     * Scroll with ofset on page load with hash links in the url
+     */
+    window.addEventListener("load", () => {
+        if (window.location.hash) {
+            if (select(window.location.hash)) {
+                scrollto(window.location.hash);
+            }
+        }
+    });
 
-	//******************* Start Cookie Prompt ********************/
-	if($.cookie("XSYD_Language") === null || $.cookie("XSYD_Language") === undefined){
-		$.cookie("XSYD_Language","cn",{expires:XSYD_WebSettings.languageCookieDuration, path:'/'}); //Cookie is supposed to be set at the language detection page.
-	}
-	var CookieConsent = {message:'', dismiss:''};
-	if($.cookie("XSYD_Language") === "cn"){
-		CookieConsent.message = "此网站需要使用Cookie，以便于我们可以给您更好的访问体验";
-		CookieConsent.dismiss = "我知道了";
-		CookieConsent.link = '了解更多';
-	}else if($.cookie("XSYD_Language") === "en"){
-		CookieConsent.message = "This website needs your cookie in order for us to give you a better experience";
-		CookieConsent.dismiss = "Got it";
-		CookieConsent.link = 'Learn more';
-	}
-	cookieconsent.initialise(
-		{
-			'palette': {
-			'popup': {
-				'background': '#efefef',
-				'text': '#404040'
-			},
-			'button': {
-				'background': '#1f1915',
-				'text': '#ffffff'
-			}
-			},
-			'theme': 'edgeless',
-			'position': 'bottom',
-			'content': CookieConsent
-		}
-	);
-	//********************* End Cookie Prompt ********************/
-});
-$(window).resize(function(){
-	//******************* Start Reading Width/Height/BootstrapSize **************************
-	XSYD_CurrentPage.width = $(window).width();
-	XSYD_CurrentPage.height = $(window).height();
-	XSYD_CurrentPage.correspondingBootstrapSize = getBootstrapType(XSYD_CurrentPage.width);
-	//******************* End Reading Width/Height/BootstrapSize ***********************
-});
+    // /**
+    //  * Clients Slider
+    //  */
+    // new Swiper(".clients-slider", {
+    //     speed: 400,
+    //     loop: true,
+    //     autoplay: {
+    //         delay: 5000,
+    //         disableOnInteraction: false,
+    //     },
+    //     slidesPerView: "auto",
+    //     pagination: {
+    //         el: ".swiper-pagination",
+    //         type: "bullets",
+    //         clickable: true,
+    //     },
+    //     breakpoints: {
+    //         320: {
+    //             slidesPerView: 2,
+    //             spaceBetween: 40,
+    //         },
+    //         480: {
+    //             slidesPerView: 3,
+    //             spaceBetween: 60,
+    //         },
+    //         640: {
+    //             slidesPerView: 4,
+    //             spaceBetween: 80,
+    //         },
+    //         992: {
+    //             slidesPerView: 6,
+    //             spaceBetween: 120,
+    //         },
+    //     },
+    // });
 
-$('#LangSelection_English').click(function() {
-	"use strict";
-	$.cookie('XSYD_Language','en');
-});
-$('#LangSelection_Chinese').click(function() {
-	"use strict";
-	$.cookie('XSYD_Language','cn');
-});
+    /**
+     * Porfolio isotope and filter
+     */
+    // window.addEventListener("load", () => {
+    //     let portfolioContainer = select(".portfolio-container");
+    //     if (portfolioContainer) {
+    //         let portfolioIsotope = new Isotope(portfolioContainer, {
+    //             itemSelector: ".portfolio-item",
+    //             layoutMode: "fitRows",
+    //         });
+
+    //         let portfolioFilters = select("#portfolio-flters li", true);
+
+    //         on(
+    //             "click",
+    //             "#portfolio-flters li",
+    //             function (e) {
+    //                 e.preventDefault();
+    //                 portfolioFilters.forEach(function (el) {
+    //                     el.classList.remove("filter-active");
+    //                 });
+    //                 this.classList.add("filter-active");
+
+    //                 portfolioIsotope.arrange({
+    //                     filter: this.getAttribute("data-filter"),
+    //                 });
+    //                 aos_init();
+    //             },
+    //             true
+    //         );
+    //     }
+    // });
+
+    // /**
+    //  * Initiate portfolio lightbox
+    //  */
+    // const portfolioLightbox = GLightbox({
+    //     selector: ".portfokio-lightbox",
+    // });
+
+    // /**
+    //  * Portfolio details slider
+    //  */
+    // new Swiper(".portfolio-details-slider", {
+    //     speed: 400,
+    //     autoplay: {
+    //         delay: 5000,
+    //         disableOnInteraction: false,
+    //     },
+    //     pagination: {
+    //         el: ".swiper-pagination",
+    //         type: "bullets",
+    //         clickable: true,
+    //     },
+    // });
+
+    // /**
+    //  * Testimonials slider
+    //  */
+    // new Swiper(".testimonials-slider", {
+    //     speed: 600,
+    //     loop: true,
+    //     autoplay: {
+    //         delay: 5000,
+    //         disableOnInteraction: false,
+    //     },
+    //     slidesPerView: "auto",
+    //     pagination: {
+    //         el: ".swiper-pagination",
+    //         type: "bullets",
+    //         clickable: true,
+    //     },
+    //     breakpoints: {
+    //         320: {
+    //             slidesPerView: 1,
+    //             spaceBetween: 40,
+    //         },
+
+    //         1200: {
+    //             slidesPerView: 3,
+    //         },
+    //     },
+    // });
+
+    /**
+     * Animation on scroll
+     */
+    function aos_init() {
+        AOS.init({
+            duration: 1000,
+            easing: "ease-in-out",
+            once: true,
+            mirror: false,
+            offset:-20
+        });
+    }
+    window.addEventListener("load", () => {
+        aos_init();
+    });
+
+    // /**
+    //  * Initiate Pure Counter
+    //  */
+    // new PureCounter();
+})();
